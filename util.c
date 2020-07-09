@@ -61,6 +61,13 @@ const char *log_syscalls[] = {"socket", "connect", "send", "writev"};
 #elif defined(__powerpc__) || defined(__ia64__) || defined(__hppa__) ||        \
       defined(__sparc__) || defined(__mips__)
 const char *log_syscalls[] = {"socket", "connect", "send"};
+#elif defined(__riscv) && (__riscv_xlen == 64)
+#if defined(__ANDROID__)
+const char *log_syscalls[] = {"connect", "fcntl", "sendto", "socket", "writev"};
+#else
+const char *log_syscalls[] = {"socket", "connect", "send", "writev"};
+#endif
+
 #else
 #error "Unsupported platform"
 #endif
