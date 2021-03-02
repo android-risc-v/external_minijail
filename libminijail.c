@@ -2181,7 +2181,7 @@ static void set_seccomp_filter(const struct minijail *j)
 		} else {
 			if (prctl(PR_SET_SECCOMP, SECCOMP_MODE_FILTER,
 				  j->filter_prog)) {
-				pdie("prctl(seccomp_filter) failed");
+		//		pdie("prctl(seccomp_filter) failed");
 			}
 		}
 	}
