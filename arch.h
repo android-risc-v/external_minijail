@@ -77,8 +77,8 @@
 #    define MINIJAIL_ARCH_NAME "sparc"
 #  endif
 #elif defined(__riscv) && (__riscv_xlen == 64)
-#  define ARCH_NR AUDIT_ARCH_RISCV64
-#  define ARCH_NAME "riscv64"
+#  define MINIJAIL_ARCH_NR AUDIT_ARCH_RISCV64
+#  define MINIJAIL_ARCH_NAME "riscv64"
 #else
 #  error "AUDIT_ARCH value unavailable"
 #endif
