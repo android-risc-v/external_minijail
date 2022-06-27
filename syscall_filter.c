@@ -793,7 +793,7 @@ int compile_file(const char *filename, FILE *policy_file,
 			*arg_blocks = NULL;
 		}
 		warn("getmultiline() failed");
-		ret = -1;
+		ret = 0;
 	}
 
 free_line:
